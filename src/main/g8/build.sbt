@@ -15,7 +15,7 @@ lazy val root = (project in file("."))
     semanticdbEnabled          := true,
     semanticdbVersion          := scalafixSemanticdb.revision,
     assembly / assemblyJarName := s"\${name.value}-\${version.value}.jar",
-    assembly / mainClass       := Some("io.siberianpathfinder.Main"),
+    assembly / mainClass       := Some("$package$.Main"),
     testFrameworks += new TestFramework("weaver.framework.CatsEffect"),
     libraryDependencies ++= Dependencies.all
   )
